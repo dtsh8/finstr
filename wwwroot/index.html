@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Data </title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <div>
+        <form action="javascript:void(0);" method="get" onsubmit="getItems()">
+            <input type="text" id="data_code" name="code" value="" />
+            <input type="text" id="data_value" name="value" value="" />
+            <input type="submit" value="Filter">
+        </form>
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Code</th>
+                <th>Value</th>
+            </tr>
+            <tbody id="data_objects"></tbody>
+        </table>
+        <div id="buttons"></div>
+    </div>
+    <!--<h1>To-do CRUD</h1>
+    <h3>Add</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-name" placeholder="New to-do">
+        <input type="submit" value="Add">
+    </form>-->
+    <!--<div id="editForm">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <input type="checkbox" id="edit-isComplete">
+            <input type="text" id="edit-name">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>-->
+    <!--<p id="counter"></p>-->
+    <!--<table>
+        <tr>
+            <th>Is Complete?</th>
+            <th>Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="todos"></tbody>
+    </table>-->
+
+    <script src="js/data.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
+</html>
