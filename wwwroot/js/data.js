@@ -12,8 +12,27 @@ function getItems() {
 
     fetch(`${uri}/?code=${code}&value=${value}`)
         .then(response => response.json())
-        .then(data => { dataObjects = data; displayGridAndButtons(); })
+        .then(data => {  dataObjects = data; displayGridAndButtons(); })
         .catch(error => console.error('Unable to get items.', error));
+}
+
+function postThreeData() {
+    const arr = [
+        {"code":"1", "value":"1"},
+        {"code":"5", "value":"5"},
+        {"code":"10", "value":"32"}
+    ]
+
+    fetch(uri, {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(arr)
+    })//.then(response => response.json())
+    .then(() =>  getItems())
+    .catch(error => console.error('Unable to post 3 items.', error));
 }
 
 function displayGridAndButtons() {
